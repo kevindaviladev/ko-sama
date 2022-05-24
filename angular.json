@@ -31,9 +31,15 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "legacy/nicepage.css",
+              "legacy/Casa.css",
+              "legacy/Post-Template.css"
             ],
-            "scripts": []
+            "scripts": [
+              "legacy/jquery.js",
+              "legacy/nicepage.js"
+            ]
           },
           "configurations": {
             "production": {
