@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './common/header/header.component';
@@ -10,7 +10,7 @@ import { ProyectoComponent } from './pages/proyecto/proyecto.component';
 import { AppRoutingModule } from './app.routing.module';
 import { FooterComponent } from './common/footer/footer.component';
 import { RouterModule } from '@angular/router';
-
+import { NgxViewerModule } from 'ngx-viewer';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +20,13 @@ import { RouterModule } from '@angular/router';
     ProyectoComponent,
     FooterComponent,
   ],
-  imports: [BrowserModule, RouterModule, AppRoutingModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    RouterModule,
+    AppRoutingModule,
+    HttpClientModule,
+    NgxViewerModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
