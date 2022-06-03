@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-@import '~viewerjs/dist/viewer.css';
+@import "~viewerjs/dist/viewer.css";
 @media (max-width: 0px) {
   .u-block-1c10-2 {
     min-height: 500px;
@@ -659,6 +659,15 @@
 .clickable {
   cursor: pointer;
 }
+
+.ko-font-1 {
+  font-family: concretoKosama;
+}
+
+.ko-font-2 {
+  font-family: dreamsKosama;
+}
+
 .categoria-grid {
   grid-template-columns: 1fr !important;
   grid-gap: 22px 22px;
@@ -671,4 +680,39 @@
   @media only screen and (min-width: 1000px) {
     grid-template-columns: 1fr 1fr 1fr !important;
   }
+}
+
+.img-proyecto{
+  filter: grayscale(1);
+  transition: all 0.2s ease;
+  &:hover{
+    filter: grayscale(0);
+  }
+}
+
+/* Fuentes */
+@font-face {
+  font-family: dreamsKosama;
+  src: url("/assets/fonts/viner-hand-itc.ttf");
+}
+
+@font-face {
+  font-family: concretoKosama;
+  src: url("/assets/fonts/concreto.ttf");
+}
+
+$util-font-sizes: 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 32, 40, 48;
+
+@each $util-font-size in $util-font-sizes {
+  .font-size-#{$util-font-size} {
+    font-size: $util-font-size * 1px !important;
+  }
+}
+
+.uppercase {
+  text-transform: uppercase !important;
+}
+
+.lowercase {
+  text-transform: lowercase !important;
 }

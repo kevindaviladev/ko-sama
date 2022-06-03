@@ -1,0 +1,11 @@
+.papel {
+  display: flex;
+  align-items: center;
+  gap: 0.2em;
+}
+.concreto {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.5em;
+}

@@ -16,6 +16,8 @@ export class ProyectoComponent implements OnInit {
 
   ngOnInit(): void {
     this.getProyecto();
+
+    // const res = await this.kosamaService.getData().toPromise();
   }
 
   getProyecto() {

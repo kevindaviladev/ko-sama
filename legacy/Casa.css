@@ -888,7 +888,6 @@
 }
 
 .u-section-6 .u-gallery-1 {
-  height: 280px;
   grid-template-columns: repeat(5, auto);
   grid-gap: 20px;
   margin: 0 auto 0 0;
@@ -962,12 +961,8 @@
 }
 
 @media (max-width: 991px) {
-  .u-section-6 {
-    min-height: 506px;
-  }
-
   .u-section-6 .u-gallery-1 {
-    height: 506px;
+    height: auto;
     grid-template-columns: repeat(3, auto);
     margin-right: initial;
     margin-left: initial;

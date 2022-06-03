@@ -1,0 +1,32 @@
+/*To Make it look nice*/
+p {
+  float: left;
+  font-family: "Open sans";
+  /*To make it so when the browser is small The font changes!*/
+  font-size: 1.5em;
+  color: grey;
+}
+/*For the hover effect*/
+p:hover {
+  font-family: "Open sans";
+  color: white;
+}
+/*To Make it look nice and for positioning*/
+.Footer {
+  display: flex;
+  justify-content: center;
+  background-color: black;
+}
+/* To get rid of the margins */
+body {
+  margin: 0;
+}
+/*To Make it look nice*/
+a {
+  text-decoration: none;
+  color: grey;
+}
+/*For the hover effect*/
+a:hover {
+  color: white;
+}
