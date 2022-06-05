@@ -29,7 +29,7 @@
               >
                 <img
                   class="u-expand-resize u-image u-image-2"
-                  src="assets/pexels-photo-2987769.jpeg"
+                  [src]="categoria.imagenSecundaria"
                   data-image-width="1000"
                   data-image-height="1500"
                 />
@@ -41,11 +41,12 @@
               <div
                 class="u-container-layout u-valign-bottom-sm u-valign-bottom-xs u-valign-middle-lg u-valign-middle-md u-valign-middle-xl u-container-layout-3"
               >
-                <h5 class="u-text u-text-1">{{categoria.name}}</h5>
+                <!-- <h5 class="u-text u-text-1">{{categoria.name}}</h5>
                 <h2 class="u-text u-text-2">
                   Fantastic <b>Concept</b> Designs That Take
                   <b>Architecture</b> To New Heights
-                </h2>
+                </h2> -->
+                <img [src]="categoria.banner" alt="Banner cateogira">
               </div>
             </div>
           </div>
@@ -59,14 +60,7 @@
                 class="u-container-layout u-valign-middle u-container-layout-4"
               >
                 <p class="u-text u-text-3">
-                  Everyone’s dream home is different and often the includes some
-                  pretty crazy features or has a design that’s fantastic in a
-                  fictional sense. Such concepts are almost never translated
-                  into the real world and those that are impress on levels we
-                  couldn’t even imagine before.&nbsp;<br />
-                  <br />We got curious so we did some research and, as it turns
-                  out, there are some fantastic house concepts waiting to be
-                  built right now and even some that are already real.<br />
+                  {{categoria.descripcion}}
                 </p>
               </div>
             </div>

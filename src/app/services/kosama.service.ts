@@ -30,10 +30,11 @@ export class KosamaService {
       .pipe(
         map((res: any) => ({
           ...res.data[0],
-          imagen: `${environment.directusBaseUrl}/assets/${res.data[0].imagen}`,
+          imagenPrincipal: `${environment.directusBaseUrl}/assets/${res.data[0].imagen_principal}`,
+          imagenSecundaria: `${environment.directusBaseUrl}/assets/${res.data[0].imagen_secundaria}`,
+          banner: `${environment.directusBaseUrl}/assets/${res.data[0].banner}`,
         })),
         switchMap((res: any) => {
-          // console.log('res', res);
           return this.http
             .get(
               // `${environment.directusBaseUrl}/items/Proyecto?fields=*,fotos.*&filter[id]]=${idCategoria}`
@@ -75,5 +76,4 @@ export class KosamaService {
         })
       );
   }
-
 }
