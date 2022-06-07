@@ -15,6 +15,7 @@ export class KosamaService {
           id: categoria.id,
           name: categoria.name,
           imagen: `${environment.directusBaseUrl}/assets/${categoria.imagen}`,
+          imagenPrincipal: `${environment.directusBaseUrl}/assets/${categoria.imagen_principal}`,
           banner: '',
         }));
         return newRes;
