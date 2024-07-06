@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  directusBaseUrl:'https://ideal-fruit-production-bb83.up.railway.app',
+  directusBaseUrl:'https://directus-production-4c4d.up.railway.app',
 };

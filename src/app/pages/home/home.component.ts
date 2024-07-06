@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { directus } from 'src/app/services/directus';
 import { KosamaService } from 'src/app/services/kosama.service';
 @Component({
   selector: 'app-home',
