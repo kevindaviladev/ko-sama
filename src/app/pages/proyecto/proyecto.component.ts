@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Project } from 'src/app/models/proyecto.models';
 import { KosamaService } from 'src/app/services/kosama.service';
 
 @Component({
@@ -8,23 +9,23 @@ import { KosamaService } from 'src/app/services/kosama.service';
   styleUrls: ['./proyecto.component.scss'],
 })
 export class ProyectoComponent implements OnInit {
-  proyecto: any;
+  proyecto!: Project;
   constructor(
     private route: ActivatedRoute,
-    private kosamaService: KosamaService
+    private kosamaService: KosamaService,
   ) {}
 
   ngOnInit(): void {
     this.getProyecto();
-
-    // const res = await this.kosamaService.getData().toPromise();
   }
 
   getProyecto() {
     const id = this.route.snapshot.paramMap.get('id');
-    if (id) this.kosamaService.getProyecto(id).subscribe(res => {
-      console.log(res)
-      this.proyecto = res
+    if (!id) {
+      return;
+    }
+    this.kosamaService.getProyecto(id).subscribe((res) => {
+      this.proyecto = res;
     });
   }
 }

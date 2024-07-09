@@ -6,7 +6,7 @@ import {
   HttpInterceptor,
 } from '@angular/common/http';
 import { Observable, of, throwError, timer } from 'rxjs';
-import { concatMap, delay, mergeMap, retryWhen, tap } from 'rxjs/operators';
+import { mergeMap, retryWhen, tap } from 'rxjs/operators';
 
 export const retryCount = 3;
 export const retryWaitMilliSeconds = 1000;
@@ -16,11 +16,9 @@ export class DirectusInterceptor implements HttpInterceptor {
   retryDelay = 2000;
   retryMaxAttempts = 2;
 
-  constructor() {}
-
   intercept(
     request: HttpRequest<any>,
-    next: HttpHandler
+    next: HttpHandler,
   ): Observable<HttpEvent<any>> {
     return next.handle(request).pipe(this.retryAfterDelay());
   }
@@ -35,11 +33,11 @@ export class DirectusInterceptor implements HttpInterceptor {
           }
           return of(err).pipe(
             tap((error) =>
-              console.log(`Retrying ${error.url}. Retry count ${count + 1}`)
+              console.log(`Retrying ${error.url}. Retry count ${count + 1}`),
             ),
-            mergeMap(() => timer(this.retryDelay))
+            mergeMap(() => timer(this.retryDelay)),
           );
-        })
+        }),
       );
     });
   }

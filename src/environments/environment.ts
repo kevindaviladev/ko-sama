@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  directusBaseUrl:'https://directus-production-d177.up.railway.app', 
+  directusBaseUrl:'https://admin.ko-sama.com', 
 };
 
 /*

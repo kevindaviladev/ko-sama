@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Category } from 'src/app/models/categoria.model';
+import { Project } from 'src/app/models/proyecto.models';
 import { KosamaService } from 'src/app/services/kosama.service';
 
 @Component({
@@ -8,10 +10,10 @@ import { KosamaService } from 'src/app/services/kosama.service';
   styleUrls: ['./categoria.component.scss'],
 })
 export class CategoriaComponent implements OnInit {
-  categoria: any;
+  categoria!: Category & { proyectos: Project[] };
   constructor(
     private route: ActivatedRoute,
-    private kosamaService: KosamaService
+    private kosamaService: KosamaService,
   ) {}
 
   ngOnInit(): void {

@@ -12,6 +12,7 @@ import { FooterComponent } from './common/footer/footer.component';
 import { RouterModule } from '@angular/router';
 import { NgxViewerModule } from 'ngx-viewer';
 import { DirectusInterceptor } from './interceptors/directus.interceptor';
+import { SpinnerComponent } from './common/spinner/spinner.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,6 +21,7 @@ import { DirectusInterceptor } from './interceptors/directus.interceptor';
     CategoriaComponent,
     ProyectoComponent,
     FooterComponent,
+    SpinnerComponent,
   ],
   imports: [
     BrowserModule,
