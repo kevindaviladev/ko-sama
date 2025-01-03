@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  directusBaseUrl:'https://admin.ko-sama.com',
+  directusBaseUrl:'https://directus-production-8253.up.railway.app',
 };
